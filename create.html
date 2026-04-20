@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Record - EduTrack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-mortarboard-fill"></i> EduTrack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visualization.html"><i class="bi bi-bar-chart-line"></i> Data Visualization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="bi bi-people"></i> About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-database"></i> CRUD Operations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="create.html"><i class="bi bi-plus-circle text-success"></i> Create</a></li>
+                            <li><a class="dropdown-item" href="read.html"><i class="bi bi-eye text-primary"></i> Read</a></li>
+                            <li><a class="dropdown-item" href="update.html"><i class="bi bi-pencil-square text-warning"></i> Update</a></li>
+                            <li><a class="dropdown-item" href="delete.html"><i class="bi bi-trash text-danger"></i> Delete</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="crud-page-header create-header">
+        <div class="container text-center">
+            <h1><i class="bi bi-plus-circle-fill"></i> Create New Record</h1>
+            <p>Add a new student, course, or enrollment to the EduTrack system</p>
+        </div>
+    </section>
+
+    <section class="crud-content">
+        <div class="container">
+            <div class="card mb-4">
+                <div class="card-body p-4">
+                    <h4 class="fw-bold text-success"><i class="bi bi-info-circle-fill"></i> How Create Works</h4>
+                    <p>The <strong>Create</strong> operation allows administrators to add new records to the database. 
+                    In the final dynamic version, this form will submit data via an API endpoint that inserts new rows 
+                    into the corresponding database tables (Students, Courses, Enrollments, or Instructors).</p>
+                    <p class="mb-0"><strong>Process:</strong> User fills out the form → Data is validated → API POST request is sent → 
+                    New record is inserted into the database → Confirmation is displayed.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3"><i class="bi bi-person-plus-fill text-success"></i> Register New Student</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">First Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter first name">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Last Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter last name">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="student@university.edu">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Major</label>
+                                    <select class="form-select">
+                                        <option selected disabled>Select major...</option>
+                                        <option>Computer Science</option>
+                                        <option>Business Administration</option>
+                                        <option>Engineering</option>
+                                        <option>Health Sciences</option>
+                                        <option>Arts & Humanities</option>
+                                        <option>Mathematics</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Enrollment Date</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <button type="button" class="btn btn-success w-100" onclick="alert('In the final project, this will send a POST request to the API to create a new student record.')">
+                                    <i class="bi bi-plus-circle"></i> Create Student
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3"><i class="bi bi-book-fill text-success"></i> Add New Course</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Course Name</label>
+                                    <input type="text" class="form-control" placeholder="e.g., Introduction to Programming">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Description</label>
+                                    <textarea class="form-control" rows="3" placeholder="Brief course description..."></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Credits</label>
+                                    <select class="form-select">
+                                        <option selected disabled>Select credits...</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Instructor</label>
+                                    <select class="form-select">
+                                        <option selected disabled>Select instructor...</option>
+                                        <option>Dr. Smith - Computer Science</option>
+                                        <option>Prof. Johnson - Business</option>
+                                        <option>Dr. Williams - Engineering</option>
+                                        <option>Prof. Davis - Mathematics</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn btn-success w-100 mt-4" onclick="alert('In the final project, this will send a POST request to the API to create a new course.')">
+                                    <i class="bi bi-plus-circle"></i> Create Course
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-5">
+                <a href="index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i> Back to Home</a>
+                <a href="read.html" class="btn btn-primary">View Records <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="mb-1">&copy; 2025 EduTrack - Smart Education Management System</p>
+            <p class="mb-0">
+                <a href="https://github.com" target="_blank"><i class="bi bi-github"></i> GitHub Repository</a>
+                &nbsp;|&nbsp;
+                <a href="about.html">About Us</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/04/20/01/20260420011533-8QXLXXPJ.js" defer></script>
+</body>
+</html>

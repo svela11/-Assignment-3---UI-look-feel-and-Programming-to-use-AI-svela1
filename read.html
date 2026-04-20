@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Records - EduTrack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-mortarboard-fill"></i> EduTrack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visualization.html"><i class="bi bi-bar-chart-line"></i> Data Visualization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="bi bi-people"></i> About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-database"></i> CRUD Operations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="create.html"><i class="bi bi-plus-circle text-success"></i> Create</a></li>
+                            <li><a class="dropdown-item active" href="read.html"><i class="bi bi-eye text-primary"></i> Read</a></li>
+                            <li><a class="dropdown-item" href="update.html"><i class="bi bi-pencil-square text-warning"></i> Update</a></li>
+                            <li><a class="dropdown-item" href="delete.html"><i class="bi bi-trash text-danger"></i> Delete</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="crud-page-header read-header">
+        <div class="container text-center">
+            <h1><i class="bi bi-eye-fill"></i> View Records</h1>
+            <p>Browse student, course, and enrollment data from the EduTrack database</p>
+        </div>
+    </section>
+
+    <section class="crud-content">
+        <div class="container">
+            <div class="card mb-4">
+                <div class="card-body p-4">
+                    <h4 class="fw-bold text-primary"><i class="bi bi-info-circle-fill"></i> How Read Works</h4>
+                    <p>The <strong>Read</strong> operation retrieves and displays data from the database. 
+                    In the final project, this page will fetch data via API GET requests, displaying real-time 
+                    records from the Students, Courses, and Enrollments tables.</p>
+                    <p class="mb-0"><strong>Process:</strong> Page loads → API GET request is sent → Data is returned as JSON → 
+                    Records are rendered in tables → Users can search and filter results.</p>
+                </div>
+            </div>
+
+            <h4 class="fw-bold mb-3"><i class="bi bi-people-fill text-primary"></i> Students</h4>
+            <div class="table-container mb-5">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Major</th>
+                            <th>Enrollment Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Alice</td>
+                            <td>Johnson</td>
+                            <td>alice.j@university.edu</td>
+                            <td><span class="badge bg-primary bg-opacity-10 text-primary">Computer Science</span></td>
+                            <td>2024-08-15</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bob</td>
+                            <td>Smith</td>
+                            <td>bob.s@university.edu</td>
+                            <td><span class="badge bg-success bg-opacity-10 text-success">Business</span></td>
+                            <td>2024-08-20</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clara</td>
+                            <td>Williams</td>
+                            <td>clara.w@university.edu</td>
+                            <td><span class="badge bg-info bg-opacity-10 text-info">Engineering</span></td>
+                            <td>2024-09-01</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>David</td>
+                            <td>Brown</td>
+                            <td>david.b@university.edu</td>
+                            <td><span class="badge bg-warning bg-opacity-10 text-warning">Mathematics</span></td>
+                            <td>2024-09-10</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Emma</td>
+                            <td>Davis</td>
+                            <td>emma.d@university.edu</td>
+                            <td><span class="badge bg-danger bg-opacity-10 text-danger">Health Sciences</span></td>
+                            <td>2025-01-12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="fw-bold mb-3"><i class="bi bi-book-fill text-primary"></i> Courses</h4>
+            <div class="table-container mb-5">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Course Name</th>
+                            <th>Credits</th>
+                            <th>Instructor</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>101</td>
+                            <td>Introduction to Programming</td>
+                            <td><span class="badge bg-primary">3</span></td>
+                            <td>Dr. Smith</td>
+                            <td>Fundamentals of programming using Python</td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td>Data Structures & Algorithms</td>
+                            <td><span class="badge bg-primary">4</span></td>
+                            <td>Dr. Smith</td>
+                            <td>Advanced data structures and algorithm design</td>
+                        </tr>
+                        <tr>
+                            <td>201</td>
+                            <td>Marketing Principles</td>
+                            <td><span class="badge bg-success">3</span></td>
+                            <td>Prof. Johnson</td>
+                            <td>Core marketing concepts and strategies</td>
+                        </tr>
+                        <tr>
+                            <td>301</td>
+                            <td>Thermodynamics</td>
+                            <td><span class="badge bg-info">4</span></td>
+                            <td>Dr. Williams</td>
+                            <td>Laws of thermodynamics and heat transfer</td>
+                        </tr>
+                        <tr>
+                            <td>401</td>
+                            <td>Calculus II</td>
+                            <td><span class="badge bg-warning">4</span></td>
+                            <td>Prof. Davis</td>
+                            <td>Integration techniques and series</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="fw-bold mb-3"><i class="bi bi-clipboard-data-fill text-primary"></i> Enrollments</h4>
+            <div class="table-container mb-4">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Enrollment ID</th>
+                            <th>Student</th>
+                            <th>Course</th>
+                            <th>Grade</th>
+                            <th>Enrollment Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Alice Johnson</td>
+                            <td>Introduction to Programming</td>
+                            <td><span class="badge bg-success">A</span></td>
+                            <td>2024-08-15</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Alice Johnson</td>
+                            <td>Data Structures & Algorithms</td>
+                            <td><span class="badge bg-primary">B+</span></td>
+                            <td>2025-01-10</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Bob Smith</td>
+                            <td>Marketing Principles</td>
+                            <td><span class="badge bg-success">A-</span></td>
+                            <td>2024-08-20</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Clara Williams</td>
+                            <td>Thermodynamics</td>
+                            <td><span class="badge bg-primary">B</span></td>
+                            <td>2024-09-01</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>David Brown</td>
+                            <td>Calculus II</td>
+                            <td><span class="badge bg-warning text-dark">C+</span></td>
+                            <td>2024-09-10</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Emma Davis</td>
+                            <td>Introduction to Programming</td>
+                            <td><span class="badge bg-success">A</span></td>
+                            <td>2025-01-12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <a href="create.html" class="btn btn-outline-success"><i class="bi bi-arrow-left"></i> Create Records</a>
+                <a href="update.html" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Update Records <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="mb-1">&copy; 2025 EduTrack - Smart Education Management System</p>
+            <p class="mb-0">
+                <a href="https://github.com" target="_blank"><i class="bi bi-github"></i> GitHub Repository</a>
+                &nbsp;|&nbsp;
+                <a href="about.html">About Us</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/04/20/01/20260420011533-8QXLXXPJ.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EduTrack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-mortarboard-fill"></i> EduTrack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visualization.html"><i class="bi bi-bar-chart-line"></i> Data Visualization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html"><i class="bi bi-people"></i> About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-database"></i> CRUD Operations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="create.html"><i class="bi bi-plus-circle text-success"></i> Create</a></li>
+                            <li><a class="dropdown-item" href="read.html"><i class="bi bi-eye text-primary"></i> Read</a></li>
+                            <li><a class="dropdown-item" href="update.html"><i class="bi bi-pencil-square text-warning"></i> Update</a></li>
+                            <li><a class="dropdown-item" href="delete.html"><i class="bi bi-trash text-danger"></i> Delete</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" style="padding: 3rem 0;">
+        <div class="container text-center">
+            <h1><i class="bi bi-people-fill"></i> About Us</h1>
+            <p class="mx-auto">Meet the team behind EduTrack and explore our data architecture</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Team</h2>
+                <p class="section-subtitle">The dedicated professionals building EduTrack</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card team-card h-100">
+                        <div class="card-body">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-3" style="width: 120px; height: 120px;">
+                                <i class="bi bi-person-fill text-white" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5>Team Member 1</h5>
+                            <p class="role">Project Lead & Frontend Developer</p>
+                            <p class="contributions">
+                                Designed the overall UI/UX, created the home page and navigation structure, 
+                                and implemented responsive design across all pages.
+                            </p>
+                            <div class="mt-2">
+                                <span class="badge bg-primary bg-opacity-10 text-primary">HTML</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary">CSS</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card team-card h-100">
+                        <div class="card-body">
+                            <div class="rounded-circle bg-success d-inline-flex align-items-center justify-content-center mb-3" style="width: 120px; height: 120px;">
+                                <i class="bi bi-person-fill text-white" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5>Team Member 2</h5>
+                            <p class="role">Data Visualization & Backend Planning</p>
+                            <p class="contributions">
+                                Built interactive Chart.js visualizations, designed the logical data model, 
+                                and planned API integration for the final project.
+                            </p>
+                            <div class="mt-2">
+                                <span class="badge bg-success bg-opacity-10 text-success">Chart.js</span>
+                                <span class="badge bg-success bg-opacity-10 text-success">JavaScript</span>
+                                <span class="badge bg-success bg-opacity-10 text-success">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card team-card h-100">
+                        <div class="card-body">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 120px; height: 120px; background: var(--accent);">
+                                <i class="bi bi-person-fill text-white" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5>Team Member 3</h5>
+                            <p class="role">CRUD Pages & Chatbot Integration</p>
+                            <p class="contributions">
+                                Developed CRUD operation pages, integrated the Botpress chatbot, 
+                                and ensured cross-browser compatibility and testing.
+                            </p>
+                            <div class="mt-2">
+                                <span class="badge bg-info bg-opacity-10 text-info">CRUD</span>
+                                <span class="badge bg-info bg-opacity-10 text-info">Botpress</span>
+                                <span class="badge bg-info bg-opacity-10 text-info">Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--light);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Logical Data Model</h2>
+                <p class="section-subtitle">Our database structure with one-to-many relationships</p>
+            </div>
+            <div class="data-model-section">
+                <div class="text-center mb-4">
+                    <img src="images/data-model.svg" alt="EduTrack Logical Data Model" class="img-fluid" style="max-width: 800px;">
+                </div>
+                <div class="row g-4 mt-3">
+                    <div class="col-md-6">
+                        <h5 class="fw-bold"><i class="bi bi-diagram-3 text-primary"></i> Relationships</h5>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2">
+                                <strong class="text-primary">1:N</strong> — One <strong>Student</strong> can have many <strong>Enrollments</strong>
+                                <br><small class="text-muted">Students.StudentID → Enrollments.StudentID (FK)</small>
+                            </li>
+                            <li class="mb-2">
+                                <strong class="text-success">1:N</strong> — One <strong>Instructor</strong> can teach many <strong>Courses</strong>
+                                <br><small class="text-muted">Instructors.InstructorID → Courses.InstructorID (FK)</small>
+                            </li>
+                            <li class="mb-2">
+                                <strong style="color: var(--warning);">1:N</strong> — One <strong>Course</strong> can have many <strong>Enrollments</strong>
+                                <br><small class="text-muted">Courses.CourseID → Enrollments.CourseID (FK)</small>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="fw-bold"><i class="bi bi-table text-primary"></i> Tables Overview</h5>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2">
+                                <strong>Students</strong> — Stores student profiles with personal info and major
+                            </li>
+                            <li class="mb-2">
+                                <strong>Instructors</strong> — Contains instructor details and department assignments
+                            </li>
+                            <li class="mb-2">
+                                <strong>Courses</strong> — Course catalog linked to instructors via FK
+                            </li>
+                            <li class="mb-2">
+                                <strong>Enrollments</strong> — Junction table connecting students to courses with grades
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title mb-3">Project Repository</h2>
+            <p class="section-subtitle">View our source code and track contributions on GitHub</p>
+            <a href="https://github.com" target="_blank" class="btn btn-dark btn-lg px-5">
+                <i class="bi bi-github"></i> View on GitHub
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="mb-1">&copy; 2025 EduTrack - Smart Education Management System</p>
+            <p class="mb-0">
+                <a href="https://github.com" target="_blank"><i class="bi bi-github"></i> GitHub Repository</a>
+                &nbsp;|&nbsp;
+                <a href="index.html">Home</a>
+                &nbsp;|&nbsp;
+                <a href="visualization.html">Analytics</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/04/20/01/20260420011533-8QXLXXPJ.js" defer></script>
+</body>
+</html>

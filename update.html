@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Record - EduTrack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-mortarboard-fill"></i> EduTrack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visualization.html"><i class="bi bi-bar-chart-line"></i> Data Visualization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="bi bi-people"></i> About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-database"></i> CRUD Operations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="create.html"><i class="bi bi-plus-circle text-success"></i> Create</a></li>
+                            <li><a class="dropdown-item" href="read.html"><i class="bi bi-eye text-primary"></i> Read</a></li>
+                            <li><a class="dropdown-item active" href="update.html"><i class="bi bi-pencil-square text-warning"></i> Update</a></li>
+                            <li><a class="dropdown-item" href="delete.html"><i class="bi bi-trash text-danger"></i> Delete</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="crud-page-header update-header">
+        <div class="container text-center">
+            <h1><i class="bi bi-pencil-square"></i> Update Record</h1>
+            <p>Modify existing student, course, or enrollment information</p>
+        </div>
+    </section>
+
+    <section class="crud-content">
+        <div class="container">
+            <div class="card mb-4">
+                <div class="card-body p-4">
+                    <h4 class="fw-bold" style="color: #c4a030;"><i class="bi bi-info-circle-fill"></i> How Update Works</h4>
+                    <p>The <strong>Update</strong> operation allows administrators to modify existing records in the database. 
+                    In the final dynamic version, users will select a record, edit its fields, and submit the changes 
+                    via an API PUT/PATCH request that updates the corresponding database row.</p>
+                    <p class="mb-0"><strong>Process:</strong> Select a record → Edit fields → Validate changes → API PUT request is sent → 
+                    Database record is updated → Updated data is displayed.</p>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-search text-warning"></i> Select Record to Update</h5>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">Record Type</label>
+                            <select class="form-select" id="recordType">
+                                <option selected>Student</option>
+                                <option>Course</option>
+                                <option>Enrollment</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">Select Record</label>
+                            <select class="form-select">
+                                <option selected>Alice Johnson (ID: 1)</option>
+                                <option>Bob Smith (ID: 2)</option>
+                                <option>Clara Williams (ID: 3)</option>
+                                <option>David Brown (ID: 4)</option>
+                                <option>Emma Davis (ID: 5)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-end">
+                            <button class="btn btn-warning w-100"><i class="bi bi-search"></i> Load Record</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3"><i class="bi bi-pencil-fill text-warning"></i> Editing: Alice Johnson (Student ID: 1)</h5>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <i class="bi bi-exclamation-triangle-fill"></i> 
+                                <strong>Note:</strong> Fields are pre-populated with current data. Modify the fields you wish to update.
+                            </div>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">First Name</label>
+                                        <input type="text" class="form-control" value="Alice">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">Last Name</label>
+                                        <input type="text" class="form-control" value="Johnson">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">Email Address</label>
+                                        <input type="email" class="form-control" value="alice.j@university.edu">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">Major</label>
+                                        <select class="form-select">
+                                            <option selected>Computer Science</option>
+                                            <option>Business Administration</option>
+                                            <option>Engineering</option>
+                                            <option>Health Sciences</option>
+                                            <option>Arts & Humanities</option>
+                                            <option>Mathematics</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">Enrollment Date</label>
+                                        <input type="date" class="form-control" value="2024-08-15">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">Student ID</label>
+                                        <input type="text" class="form-control" value="1" disabled>
+                                        <small class="text-muted">Primary key - cannot be modified</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mt-4">
+                                    <button type="button" class="btn btn-warning flex-fill" onclick="alert('In the final project, this will send a PUT request to the API to update the student record.')">
+                                        <i class="bi bi-check-circle"></i> Save Changes
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary flex-fill">
+                                        <i class="bi bi-x-circle"></i> Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-5">
+                <a href="read.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> View Records</a>
+                <a href="delete.html" class="btn btn-danger">Delete Records <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="mb-1">&copy; 2025 EduTrack - Smart Education Management System</p>
+            <p class="mb-0">
+                <a href="https://github.com" target="_blank"><i class="bi bi-github"></i> GitHub Repository</a>
+                &nbsp;|&nbsp;
+                <a href="about.html">About Us</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/04/20/01/20260420011533-8QXLXXPJ.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Record - EduTrack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-mortarboard-fill"></i> EduTrack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visualization.html"><i class="bi bi-bar-chart-line"></i> Data Visualization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="bi bi-people"></i> About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-database"></i> CRUD Operations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="create.html"><i class="bi bi-plus-circle text-success"></i> Create</a></li>
+                            <li><a class="dropdown-item" href="read.html"><i class="bi bi-eye text-primary"></i> Read</a></li>
+                            <li><a class="dropdown-item" href="update.html"><i class="bi bi-pencil-square text-warning"></i> Update</a></li>
+                            <li><a class="dropdown-item active" href="delete.html"><i class="bi bi-trash text-danger"></i> Delete</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="crud-page-header delete-header">
+        <div class="container text-center">
+            <h1><i class="bi bi-trash-fill"></i> Delete Record</h1>
+            <p>Remove student, course, or enrollment records from the system</p>
+        </div>
+    </section>
+
+    <section class="crud-content">
+        <div class="container">
+            <div class="card mb-4">
+                <div class="card-body p-4">
+                    <h4 class="fw-bold text-danger"><i class="bi bi-info-circle-fill"></i> How Delete Works</h4>
+                    <p>The <strong>Delete</strong> operation removes records from the database. In the final dynamic version, 
+                    users will select a record and confirm its deletion. The system will send an API DELETE request 
+                    to remove the corresponding row from the database.</p>
+                    <p class="mb-0"><strong>Process:</strong> Select a record → Review details → Confirm deletion → API DELETE request is sent → 
+                    Record is removed from the database → Confirmation message is shown.</p>
+                    <div class="alert alert-danger mt-3 mb-0">
+                        <i class="bi bi-exclamation-triangle-fill"></i> 
+                        <strong>Important:</strong> Deleting a record is permanent. The system will implement cascade rules 
+                        to handle related records (e.g., deleting a student will also remove their enrollments).
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="fw-bold mb-3"><i class="bi bi-trash text-danger"></i> Select Records to Delete</h4>
+            <div class="table-container mb-4">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Name / Description</th>
+                            <th>Details</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>1</td>
+                            <td><span class="badge bg-primary">Student</span></td>
+                            <td>Alice Johnson</td>
+                            <td>Computer Science • 2 enrollments</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger" onclick="alert('In the final project, this will send a DELETE request to remove this student and cascade to enrollments.')">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>2</td>
+                            <td><span class="badge bg-primary">Student</span></td>
+                            <td>Bob Smith</td>
+                            <td>Business • 1 enrollment</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger" onclick="alert('In the final project, this will send a DELETE request to remove this student.')">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>101</td>
+                            <td><span class="badge bg-success">Course</span></td>
+                            <td>Introduction to Programming</td>
+                            <td>3 credits • Dr. Smith • 2 students enrolled</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger" onclick="alert('In the final project, this will send a DELETE request to remove this course.')">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>3</td>
+                            <td><span class="badge bg-info">Enrollment</span></td>
+                            <td>Bob Smith → Marketing Principles</td>
+                            <td>Grade: A- • Enrolled: 2024-08-20</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger" onclick="alert('In the final project, this will send a DELETE request to remove this enrollment.')">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>5</td>
+                            <td><span class="badge bg-info">Enrollment</span></td>
+                            <td>David Brown → Calculus II</td>
+                            <td>Grade: C+ • Enrolled: 2024-09-10</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger" onclick="alert('In the final project, this will send a DELETE request to remove this enrollment.')">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold text-danger"><i class="bi bi-exclamation-diamond-fill"></i> Confirm Deletion</h5>
+                    <p>Please review the selected records above before confirming. This action cannot be undone in the final application.</p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-danger" onclick="alert('In the final project, this will process all selected deletions via the API.')">
+                            <i class="bi bi-trash-fill"></i> Delete Selected Records
+                        </button>
+                        <button class="btn btn-outline-secondary">
+                            <i class="bi bi-x-circle"></i> Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold"><i class="bi bi-diagram-3 text-danger"></i> Cascade Delete Rules</h5>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-4">
+                            <div class="p-3 rounded" style="background: rgba(239,71,111,0.05); border-left: 4px solid var(--danger);">
+                                <strong>Delete Student</strong>
+                                <p class="small text-muted mb-0">Removes the student and all associated enrollments from the system.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 rounded" style="background: rgba(239,71,111,0.05); border-left: 4px solid var(--danger);">
+                                <strong>Delete Course</strong>
+                                <p class="small text-muted mb-0">Removes the course and all enrollment records linked to it.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 rounded" style="background: rgba(239,71,111,0.05); border-left: 4px solid var(--danger);">
+                                <strong>Delete Enrollment</strong>
+                                <p class="small text-muted mb-0">Removes only the enrollment record. Student and course remain intact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-5">
+                <a href="update.html" class="btn btn-outline-warning"><i class="bi bi-arrow-left"></i> Update Records</a>
+                <a href="index.html" class="btn btn-primary">Back to Home <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="mb-1">&copy; 2025 EduTrack - Smart Education Management System</p>
+            <p class="mb-0">
+                <a href="https://github.com" target="_blank"><i class="bi bi-github"></i> GitHub Repository</a>
+                &nbsp;|&nbsp;
+                <a href="about.html">About Us</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/04/20/01/20260420011533-8QXLXXPJ.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack - Smart Education Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-mortarboard-fill"></i> EduTrack
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="bi bi-house-door"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visualization.html">
+                            <i class="bi bi-bar-chart-line"></i> Data Visualization
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <i class="bi bi-people"></i> About Us
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-database"></i> CRUD Operations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="create.html"><i class="bi bi-plus-circle text-success"></i> Create</a></li>
+                            <li><a class="dropdown-item" href="read.html"><i class="bi bi-eye text-primary"></i> Read</a></li>
+                            <li><a class="dropdown-item" href="update.html"><i class="bi bi-pencil-square text-warning"></i> Update</a></li>
+                            <li><a class="dropdown-item" href="delete.html"><i class="bi bi-trash text-danger"></i> Delete</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 fade-in-up">
+                    <h1>Smart Education Management System</h1>
+                    <p class="mb-4">
+                        EduTrack simplifies academic management by providing a centralized platform to manage students, 
+                        courses, enrollments, and instructor data. Track performance, visualize trends, and make 
+                        data-driven decisions for better educational outcomes.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="visualization.html" class="btn btn-light btn-lg px-4">
+                            <i class="bi bi-graph-up"></i> View Analytics
+                        </a>
+                        <a href="about.html" class="btn btn-outline-light btn-lg px-4">
+                            <i class="bi bi-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                    <i class="bi bi-mortarboard-fill" style="font-size: 12rem; opacity: 0.15;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Key Features</h2>
+                <p class="section-subtitle">Everything you need to manage your educational institution</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card feature-card h-100">
+                        <div class="card-body">
+                            <div class="icon-wrapper icon-primary">
+                                <i class="bi bi-person-badge"></i>
+                            </div>
+                            <h5 class="card-title">Student Management</h5>
+                            <p class="card-text">Register, track, and manage student profiles with comprehensive academic records.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card feature-card h-100">
+                        <div class="card-body">
+                            <div class="icon-wrapper icon-success">
+                                <i class="bi bi-book"></i>
+                            </div>
+                            <h5 class="card-title">Course Catalog</h5>
+                            <p class="card-text">Organize courses by department, credits, and instructors with easy enrollment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card feature-card h-100">
+                        <div class="card-body">
+                            <div class="icon-wrapper icon-warning">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <h5 class="card-title">Performance Analytics</h5>
+                            <p class="card-text">Visualize student performance, enrollment trends, and course statistics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card feature-card h-100">
+                        <div class="card-body">
+                            <div class="icon-wrapper icon-accent">
+                                <i class="bi bi-clipboard-data"></i>
+                            </div>
+                            <h5 class="card-title">Enrollment Tracking</h5>
+                            <p class="card-text">Monitor enrollments, grades, and academic progress in real-time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="crud-section" style="background: var(--light);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Data Operations</h2>
+                <p class="section-subtitle">Manage your educational data with full CRUD capabilities</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a href="create.html" class="crud-btn crud-create">
+                        <i class="bi bi-plus-circle-fill fs-4"></i> Create Record
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="read.html" class="crud-btn crud-read">
+                        <i class="bi bi-eye-fill fs-4"></i> View Records
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="update.html" class="crud-btn crud-update">
+                        <i class="bi bi-pencil-fill fs-4"></i> Update Record
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="delete.html" class="crud-btn crud-delete">
+                        <i class="bi bi-trash-fill fs-4"></i> Delete Record
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <h2>1,250+</h2>
+                        <p>Students Enrolled</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <h2>85</h2>
+                        <p>Courses Available</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <h2>45</h2>
+                        <p>Instructors</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <h2>96%</h2>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Simple steps to manage your educational data</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="rounded-circle bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <span class="text-primary fw-bold fs-4">1</span>
+                            </div>
+                            <h5 class="card-title">Register Students</h5>
+                            <p class="card-text">Add student profiles with personal and academic information to the system.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="rounded-circle bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <span class="text-primary fw-bold fs-4">2</span>
+                            </div>
+                            <h5 class="card-title">Enroll in Courses</h5>
+                            <p class="card-text">Assign students to courses taught by qualified instructors across departments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="rounded-circle bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <span class="text-primary fw-bold fs-4">3</span>
+                            </div>
+                            <h5 class="card-title">Track Progress</h5>
+                            <p class="card-text">Monitor grades, enrollment trends, and performance with interactive dashboards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="mb-1">&copy; 2025 EduTrack - Smart Education Management System</p>
+            <p class="mb-0">
+                <a href="https://github.com" target="_blank"><i class="bi bi-github"></i> GitHub Repository</a>
+                &nbsp;|&nbsp;
+                <a href="about.html">About Us</a>
+                &nbsp;|&nbsp;
+                <a href="visualization.html">Analytics</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/04/20/01/20260420011533-8QXLXXPJ.js" defer></script>
+</body>
+</html>
